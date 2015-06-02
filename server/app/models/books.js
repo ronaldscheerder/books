@@ -5,7 +5,9 @@
     /**
      * Module dependencies.
      */
-    /** TODO: Define variables */
+    var mongoose = require('mongoose'),
+        Schema = mongoose.Schema,
+        modelName;
 
     /**
      * Creates a new mongoose schema.
@@ -32,7 +34,13 @@
      * @see http://mongoosejs.com/docs/schematypes.html
      * @see http://mongoosejs.com/docs/guide.html#collection
      */
-    /** TODO: Create schema */
+    schemaName = new Schema({
+        title: {type: String, required: true, unique: true},
+        author: {type: String, required: true},
+        description: {type: String},
+        modificationDate: {type: Date, "default":Date.now}
+        },
+        {collection: 'books'});
 
     /**
      * Custom validator
@@ -52,9 +60,7 @@
      * @returns true or false. In case of ```false```, a message 'Invalid title' is returned as well.
      * @see http://mongoosejs.com/docs/validation.html
      */
-    /**
-     * TODO: Create custom validator
-     */
+
 
     /**
      * Instructions, hints and questions.
