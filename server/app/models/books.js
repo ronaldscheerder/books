@@ -7,6 +7,7 @@
      */
     var mongoose = require('mongoose'),
         Schema = mongoose.Schema,
+        schemaName,
         modelName;
 
     /**
@@ -61,6 +62,9 @@
      * @see http://mongoosejs.com/docs/validation.html
      */
 
+    schemaName.path('title').validate(function (val) {
+        return (val !== undefined && val !== null && val.length >= 8);
+    }, 'Invalid title');
 
     /**
      * Instructions, hints and questions.
@@ -69,6 +73,7 @@
      * @class Model/Book
      * @see http://mongoosejs.com/docs/models.html
      */
-    /** TODO: Create model */
+    modelName = "Book";
+    mongoose.model(modelName, schemaName);
 
 }());
