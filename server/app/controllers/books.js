@@ -85,9 +85,28 @@ exports.create = function(req, res) {
  * @see http://mongoosejs.com/docs/api.html#model_Model.find
  * @module books/list
  */
-/**
- * TODO: Create a RETRIEVE all document controller
- */
+
+exports.list = function (req, res) {
+    var conditions, fields, sort;
+
+    conditions = {};
+    fields = {};
+    sort = {'modificationDate': -1};
+
+    Book
+        .find(conditions, fields)
+        .sort(sort)
+        .exec(function (err, doc) {
+
+            var retObj = {
+                meta: {"action": "list", 'timestamp': new Date(), filename: __filename},
+                doc: doc,   // array
+                err: err
+            };
+
+            return res.send(retObj);
+        });
+};
 
 /**
  * RETRIEVE _one_ book
@@ -122,9 +141,25 @@ exports.create = function(req, res) {
  * @see http://docs.mongodb.org/manual/reference/method/db.collection.findOne/
  * @see http://mongoosejs.com/docs/api.html#model_Model.findOne
  */
-/**
- * TODO: Create a RETRIEVE 1 document controller
- */
+
+exports.detail = function (req, res) {
+    var conditions, fields;
+
+    conditions = {_id: req.params._id};
+    fields = {};
+
+    Book
+        .findOne(conditions, fields)
+        .exec(function (err, doc) {
+            var retObj = {
+                meta: {"action": "detail", 'timestamp': new Date(), filename: __filename},
+                doc: doc,  // only the first document, not an array when using "findOne"
+                err: err
+            };
+
+            return res.send(retObj);
+        });
+};
 
 /**
  * UPDATE book
@@ -157,9 +192,30 @@ exports.create = function(req, res) {
  * @see http://docs.mongodb.org/manual/reference/method/db.collection.save/
  * @see http://mongoosejs.com/docs/api.html#model_Model.findOneAndUpdate
  */
- /**
-  * TODO: Create a UPDATE document controller
-  */
+
+exports.update = function (req, res) {
+
+    var conditions =
+        {_id: req.params._id},
+        update = {
+            title: req.body.title || '',
+            author: req.body.author || '',
+            description: req.body.description || ''
+        },
+        options = {multi: false},
+        callback = function (err, doc) {
+            var retObj = {
+                meta: {"action": "update", 'timestamp': new Date(), filename: __filename},
+                doc: doc,
+                err, err
+            };
+
+            return res.send(retObj);
+        };
+
+    Book
+        .findOneAndUpdate(conditions, update, options, callback);
+};
 
 /**
  * DELETE
