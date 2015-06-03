@@ -24,8 +24,10 @@ var router = express.Router();
         .get('/books/:_id', controller.detail);
 
     // UPDATE
-    /** TODO: Define route for UPDATE 1 document */
+    router
+        .put('/books/:_id', controller.updateOne);
 
     // DELETE
-    /** TODO: Define route for DELETE 1 document */
+    router
+        .delete('/books/:_id', controller.deleteOne);
 

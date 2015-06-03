@@ -193,7 +193,7 @@ exports.detail = function (req, res) {
  * @see http://mongoosejs.com/docs/api.html#model_Model.findOneAndUpdate
  */
 
-exports.update = function (req, res) {
+exports.updateOne = function (req, res) {
 
     var conditions =
         {_id: req.params._id},
@@ -207,7 +207,7 @@ exports.update = function (req, res) {
             var retObj = {
                 meta: {"action": "update", 'timestamp': new Date(), filename: __filename},
                 doc: doc,
-                err, err
+                err: err
             };
 
             return res.send(retObj);
@@ -257,6 +257,24 @@ exports.update = function (req, res) {
  * @see http://docs.mongodb.org/manual/reference/method/db.collection.remove/
  * @see http://mongoosejs.com/docs/api.html#model_Model.remove
  */
-/**
- * TODO: Create a DELETE document controller
- */
+
+exports.deleteOne = function (req, res) {
+
+    var conditions, callback, retObj;
+
+    console.log('Deleting book. ', req.params._id);
+
+    conditions = {_id: req.params._id};
+    callback = function (err, doc) {
+        retObj = {
+            meta: {"action": "delete", 'timestamp': new Date(), filename: __filename},
+            doc: doc,
+            err: err
+        };
+
+        return res.send(retObj);
+    };
+
+    Book
+        .remove(conditions, callback);
+};
