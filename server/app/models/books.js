@@ -1,4 +1,4 @@
-/** TODO: Test with static-analyzer */
+/*jsLint node:true */
 
 (function () {
     "use strict";
@@ -39,9 +39,11 @@
         title: {type: String, required: true, unique: true},
         author: {type: String, required: true},
         description: {type: String},
-        modificationDate: {type: Date, "default":Date.now}
-        },
-        {collection: 'books'});
+        modificationDate: {type: Date, "default": Date.now}
+    },
+
+            {collection: 'books'}
+            );
 
     /**
      * Custom validator

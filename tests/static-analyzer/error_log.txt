@@ -1,0 +1,183 @@
+LintRoller v2.3.5
+
+    Output for Thu Jun 04 2015 17:20:58 GMT+0200 (CEST)
+
+    Total files found   : 6
+    All errors reported : 33
+
+
+    524 lines checked via JSLINT
+    524 lines checked via JSHINT
+    524 lines checked via ESPRIMA
+
+=============== Running JSLINT [ Total errors: 1 ] ===============
+
+../../server/server.js
+    Line #: 9
+    Char #: 9
+    Reason: Unused 'http'.
+
+=============== Running JSHINT [ Total errors: 32 ] ===============
+
+../../server/app/controllers/books.js
+    Line #: 5
+    Char #: 20
+    Reason: 'require' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 40
+    Char #: 5
+    Reason: 'exports' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 47
+    Char #: 79
+    Reason: '__filename' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 91
+    Char #: 5
+    Reason: 'exports' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 104
+    Char #: 81
+    Reason: '__filename' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 147
+    Char #: 5
+    Reason: 'exports' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 157
+    Char #: 83
+    Reason: '__filename' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 198
+    Char #: 5
+    Reason: 'exports' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 210
+    Char #: 83
+    Reason: '__filename' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 263
+    Char #: 5
+    Reason: 'exports' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 267
+    Char #: 9
+    Reason: 'console' is not defined.
+
+../../server/app/controllers/books.js
+    Line #: 272
+    Char #: 79
+    Reason: '__filename' is not defined.
+
+../../server/app/models/books.js
+    Line #: 8
+    Char #: 20
+    Reason: 'require' is not defined.
+
+../../server/config/config.js
+    Line #: 3
+    Char #: 1
+    Reason: 'module' is not defined.
+
+../../server/routes/books.js
+    Line #: 6
+    Char #: 15
+    Reason: 'require' is not defined.
+
+../../server/routes/books.js
+    Line #: 15
+    Char #: 18
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 8
+    Char #: 14
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 9
+    Char #: 16
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 10
+    Char #: 19
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 11
+    Char #: 22
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 25
+    Char #: 11
+    Reason: 'process' is not defined.
+
+../../server/server.js
+    Line #: 26
+    Char #: 14
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 32
+    Char #: 16
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 39
+    Char #: 9
+    Reason: 'console' is not defined.
+
+../../server/server.js
+    Line #: 47
+    Char #: 19
+    Reason: '__dirname' is not defined.
+
+../../server/server.js
+    Line #: 50
+    Char #: 9
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 62
+    Char #: 21
+    Reason: 'process' is not defined.
+
+../../server/server.js
+    Line #: 75
+    Char #: 13
+    Reason: 'console' is not defined.
+
+../../server/server.js
+    Line #: 83
+    Char #: 28
+    Reason: '__dirname' is not defined.
+
+../../server/server.js
+    Line #: 89
+    Char #: 19
+    Reason: '__dirname' is not defined.
+
+../../server/server.js
+    Line #: 92
+    Char #: 21
+    Reason: 'require' is not defined.
+
+../../server/server.js
+    Line #: 103
+    Char #: 5
+    Reason: 'module' is not defined.
+
+=============== Running ESPRIMA [ Total errors: 0 ] ===============
+

@@ -6,7 +6,7 @@ var config = {
 
         //recursively include JS files in these folders
         filepaths: [
-            '../../client/javascripts/',
+      //      '../../client/javascripts/',
             '../../server/'
         ],
 
