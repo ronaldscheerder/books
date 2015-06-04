@@ -1,4 +1,4 @@
-/*jsLint node:true */
+/*jslint node:true */
 
 (function () {
     "use strict";
@@ -41,9 +41,8 @@
         description: {type: String},
         modificationDate: {type: Date, "default": Date.now}
     },
-
-            {collection: 'books'}
-            );
+        {collection: 'books'}
+        );
 
     /**
      * Custom validator
@@ -77,5 +76,4 @@
      */
     modelName = "Book";
     mongoose.model(modelName, schemaName);
-
 }());

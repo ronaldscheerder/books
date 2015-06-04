@@ -1,5 +1,4 @@
-/** TODO: Test with static-analyzer */
-
+/*jslint node: true */
 
 /** @module Routes for books */
 /** @class */
@@ -15,7 +14,6 @@ var router = express.Router();
 var controller = require('../app/controllers/books.js');
 
 // CREATE
-/** CREATE route for books */
 router.post('/books', controller.create);
 
 // RETRIEVE
