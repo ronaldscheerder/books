@@ -4,12 +4,26 @@
 /**
  * @see http://docs.angularjs.org/guide/concepts
  */
-/** TODO: Initialize anguar app */
 
-// Get all books
-/** TODO: Create route for displaying all books */
+var myApp = angular.module('myApp', ['myApp.services', 'ngRoute'])
 
-// Operations on 1 book
-/** TODO: Create route for displaying 1 book, save 1 book, update 1 book and delete 1 book*/
+    .config(['$routeProvider', function ($routeProvider) {
 
-/** TODO: Create route for other urls */
+        // Get all books
+        $routeProvider.when('/books', {
+            templateUrl: 'partials/book-list.html',
+            controller: BookListCtrl
+        });
+
+        // Get, Save 1 book
+        $routeProvider.when('/books/:_id', {
+            templateUrl: 'partials/book-detail.html',
+            controller: BookDetailCtrl
+        });
+
+        //When no valid route is provided
+        $routeProvider.otherwise({
+            redirectTo: "/books"
+        });
+
+    }]);

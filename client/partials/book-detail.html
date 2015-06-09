@@ -1,6 +1,11 @@
 <h2>Book</h2>
 
-<!-- TODO: Create input elements with angular for displaying all forms -->
+<form name="bookForm">
+    <p>Id: <input type="text" data-ng-model="books.doc._id" readonly></p>
+    <p>Title: <input type="text" data-ng-model="books.doc.title"></p>
+    <p>Author: <input type="text" data-ng-model="books.doc.author"></p>
+    <p>Description: <input type="text" data-ng-model="books.doc.description"></p>
 
-<!-- TODO: Create buttons for delete and save with angular -->
-
+    <button type="button" data-ng-click="delete()" id="deleteBtn">Delete</button>
+    <button type="button" data-ng-click="save()" id="saveBtn">Save</button>
+</form>

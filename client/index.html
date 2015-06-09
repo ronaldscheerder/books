@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- TODO: Create angular app from html page -->
-<html>
+<html data-ng-app="myApp">
 <head>
     <title>Book demo</title>
 </head>
@@ -8,20 +7,22 @@
 
 <h1>Book demo</h1>
 
-<!-- TODO: Create links as kind of menu -->
+<a id="homeLink" href="/#/">Home</a> | <a id="newLink" href="/#/books/new">New</a>
 
-<!-- TODO: Create angular tag for displaying controller -->
+<div data-ng-view=""></div>
 
 <hr>
-<!-- TODO: Create angular tag for displaying whoami -->
+<div id="myCtrl" data-ng-controller="myCtrl as settings">{{whoami}}</div>
 
 <!-- Lib -->
-<!-- TODO: Include Angularjs libraries -->
-
+<script src="./javascripts/lib/angular.min.js"></script>
+<script src="./javascripts/lib/angular-route.min.js"></script>
+<script src="./javascripts/lib/angular-resource.min.js"></script>
 
 <!-- App -->
-<!-- TODO: Include application libraries -->
-
+<script src="./javascripts/app.js"></script>
+<script src="./javascripts/controllers.js"></script>
+<script src="./javascripts/services.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,9 @@
 <h2>Books</h2>
 
-<!-- TODO: Create filter with angular -->
+<input ng-model="query" placeholder="Type to start searching...">
 
-<!-- TODO: Create list for displaying all items with angular -->
+<ul id="bookList">
+    <li data-ng-repeat="book in books.doc | filter:query">
+        <a href="/#/books/{{book._id}}">{{book.title}}, {{book.author}}</a>
+    </li>
+</ul>
