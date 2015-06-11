@@ -26,4 +26,3 @@ The result will be something like this: __mongorestore -d s12345678 "C:\Users\Br
 Press ENTER and you're done. The database is now stored in your local MongoDB database.
 
 Use Robomongo to connect to your local database and open the database you just created (should be 'p' + your studentnumber), open collections and see the new collection created.
-
